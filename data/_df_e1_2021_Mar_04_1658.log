@@ -1,0 +1,135 @@
+0.7206 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'pyo', 'pygame'] (in that order).
+9.5276 	INFO 	Loaded monitor calibration from ['2019_04_18 11:35']
+10.3892 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1, 1, 1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7ff11de86b38>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7ff11da3bac8>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.3895 	EXP 	window1: mouseVisible = True
+10.3895 	EXP 	window1: recordFrameIntervals = False
+10.5553 	EXP 	window1: recordFrameIntervals = True
+10.7384 	DEBUG 	Screen (0) actual frame rate measured at 60.17
+10.7385 	EXP 	window1: recordFrameIntervals = False
+11.7121 	EXP 	Created ins = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='ins', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=0.9)
+11.7170 	EXP 	Created con1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='con1', opacity=1, ori=0.0, pos=array([ 0. , -0.7]), rgb=UNKNOWN, text='Press the spacebar to continue.', units='norm', win=Window(...), wrapWidth=1)
+11.7310 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=0.9)
+12.1688 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=0.9)
+12.5906 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+13.0085 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0093 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0108 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0115 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0129 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0140 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0151 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0165 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+13.0166 	DEBUG 	Uploading Texture Font fontname to graphics card
+13.0214 	DEBUG 	Upload of Texture Font fontname complete
+13.0217 	EXP 	window1: mouseVisible = True
+13.4221 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_4', opacity=1, ori=0.0, pos=array([0. , 0.8]), rgb=UNKNOWN, text='Type your answers below:', units='norm', win=Window(...), wrapWidth=1)
+13.4412 	EXP 	textbox: autoLog = True
+13.4412 	EXP 	ins: autoDraw = True
+15.4223 	EXP 	con1: autoDraw = True
+16.2177 	DATA 	Keypress: space
+16.2435 	EXP 	ins: autoDraw = False
+16.2435 	EXP 	con1: autoDraw = False
+16.2435 	EXP 	text: autoDraw = True
+20.9218 	DEBUG 	Read excel file with openpyxl: conditions.xlsx
+20.9248 	EXP 	Imported conditions.xlsx as conditions, 16 conditions, 2 params
+20.9253 	EXP 	Created sequence: random, trialTypes=16, nReps=1, seed=None
+20.9259 	EXP 	New trial (rep=0, index=0): {'concept': 'strawberries', 'photo': 'strawberries4.jpg'}
+20.9265 	EXP 	New trial (rep=0, index=1): {'concept': 'carrots', 'photo': 'carrots1.jpg'}
+20.9270 	EXP 	New trial (rep=0, index=2): {'concept': 'elephant', 'photo': 'elephant3.jpg'}
+20.9276 	EXP 	New trial (rep=0, index=3): {'concept': 'bear', 'photo': 'bear1.jpg'}
+20.9281 	EXP 	New trial (rep=0, index=4): {'concept': 'turtle', 'photo': 'turtle3.jpg'}
+20.9286 	EXP 	New trial (rep=0, index=5): {'concept': 'chairs', 'photo': 'chairs2.jpg'}
+20.9291 	EXP 	New trial (rep=0, index=6): {'concept': 'leaves', 'photo': 'leaves1.jpg'}
+20.9297 	EXP 	New trial (rep=0, index=7): {'concept': 'mouse', 'photo': 'mouse2.jpg'}
+20.9303 	EXP 	New trial (rep=0, index=8): {'concept': 'horse', 'photo': 'horse2.jpg'}
+20.9310 	EXP 	New trial (rep=0, index=9): {'concept': 'book', 'photo': 'book1.jpg'}
+20.9314 	EXP 	New trial (rep=0, index=10): {'concept': 'rabbit', 'photo': 'rabbit1.jpg'}
+20.9319 	EXP 	New trial (rep=0, index=11): {'concept': 'car', 'photo': 'car1.jpg'}
+20.9323 	EXP 	New trial (rep=0, index=12): {'concept': 'tree', 'photo': 'tree1.jpg'}
+20.9327 	EXP 	New trial (rep=0, index=13): {'concept': 'grapes', 'photo': 'grapes1.jpg'}
+20.9330 	EXP 	New trial (rep=0, index=14): {'concept': 'alligator', 'photo': 'alligator1.jpg'}
+20.9336 	EXP 	New trial (rep=0, index=15): {'concept': 'phone', 'photo': 'phone1.jpg'}
+20.9416 	DATA 	Keypress: space
+20.9531 	EXP 	text: autoDraw = False
+20.9531 	EXP 	text_3: autoDraw = True
+23.1511 	DEBUG 	Read excel file with openpyxl: conditions.xlsx
+23.1536 	EXP 	Imported conditions.xlsx as conditions, 16 conditions, 2 params
+23.1540 	EXP 	Created sequence: random, trialTypes=16, nReps=1, seed=None
+23.1544 	EXP 	New trial (rep=0, index=0): {'concept': 'pineapple', 'photo': 'pineapple1.jpg'}
+23.1549 	EXP 	New trial (rep=0, index=1): {'concept': 'frog', 'photo': 'frog1.jpg'}
+23.1553 	EXP 	New trial (rep=0, index=2): {'concept': 'cat', 'photo': 'cat1.jpg'}
+23.1557 	EXP 	New trial (rep=0, index=3): {'concept': 'whale', 'photo': 'whale1.jpg'}
+23.1560 	EXP 	New trial (rep=0, index=4): {'concept': 'apples', 'photo': 'apples4.jpg'}
+23.1565 	EXP 	New trial (rep=0, index=5): {'concept': 'bridge', 'photo': 'bridge1.jpg'}
+23.1569 	EXP 	New trial (rep=0, index=6): {'concept': 'lion', 'photo': 'lion1.jpg'}
+23.1572 	EXP 	New trial (rep=0, index=7): {'concept': 'bike', 'photo': 'bike3.jpg'}
+23.1576 	EXP 	New trial (rep=0, index=8): {'concept': 'train', 'photo': 'train1.jpg'}
+23.1579 	EXP 	New trial (rep=0, index=9): {'concept': 'pie', 'photo': 'pie1.jpg'}
+23.1583 	EXP 	New trial (rep=0, index=10): {'concept': 'fish', 'photo': 'fish3.jpg'}
+23.1586 	EXP 	New trial (rep=0, index=11): {'concept': 'fox', 'photo': 'fox1.jpg'}
+23.1590 	EXP 	New trial (rep=0, index=12): {'concept': 'bench', 'photo': 'bench1.jpg'}
+23.1593 	EXP 	New trial (rep=0, index=13): {'concept': 'camel', 'photo': 'camel1.jpg'}
+23.1598 	EXP 	New trial (rep=0, index=14): {'concept': 'bird', 'photo': 'bird3.jpg'}
+23.1602 	EXP 	New trial (rep=0, index=15): {'concept': 'banana', 'photo': 'banana1.jpg'}
+23.1634 	DATA 	Keypress: space
+23.1729 	EXP 	text_3: autoDraw = False
+23.1729 	EXP 	text_2: autoDraw = True
+26.2145 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+26.2147 	DEBUG 	Uploading Texture Font fontname to graphics card
+26.2222 	DEBUG 	Upload of Texture Font fontname complete
+26.2226 	DATA 	Keypress: space
+26.2333 	EXP 	text_2: autoDraw = False
+26.2333 	EXP 	textbox: autoDraw = True
+26.2333 	EXP 	text_4: autoDraw = True
+28.0741 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+28.0742 	DEBUG 	Uploading Texture Font fontname to graphics card
+28.0781 	DEBUG 	Upload of Texture Font fontname complete
+28.0787 	DATA 	Keypress: s
+28.0818 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+28.0820 	DEBUG 	Uploading Texture Font fontname to graphics card
+28.0841 	DEBUG 	Upload of Texture Font fontname complete
+28.0845 	DATA 	Keypress: a
+28.1477 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+28.1479 	DEBUG 	Uploading Texture Font fontname to graphics card
+28.1499 	DEBUG 	Upload of Texture Font fontname complete
+28.1504 	DATA 	Keypress: h
+28.1742 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+28.1743 	DEBUG 	Uploading Texture Font fontname to graphics card
+28.1755 	DEBUG 	Upload of Texture Font fontname complete
+28.1760 	DATA 	Keypress: d
+28.3026 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+28.3027 	DEBUG 	Uploading Texture Font fontname to graphics card
+28.3037 	DEBUG 	Upload of Texture Font fontname complete
+28.3041 	DATA 	Keypress: j
+28.3294 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+28.3296 	DEBUG 	Uploading Texture Font fontname to graphics card
+28.3307 	DEBUG 	Upload of Texture Font fontname complete
+28.3313 	DATA 	Keypress: k
+28.3468 	DATA 	Keypress: a
+28.4149 	DATA 	Keypress: s
+28.5002 	DATA 	Keypress: d
+29.3077 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+29.3078 	DEBUG 	Uploading Texture Font fontname to graphics card
+29.3090 	DEBUG 	Upload of Texture Font fontname complete
+29.3094 	DATA 	Keypress: return
+29.5612 	DATA 	Keypress: d
+29.7090 	DATA 	Keypress: h
+29.7111 	DATA 	Keypress: a
+29.7350 	DATA 	Keypress: s
+29.8476 	DATA 	Keypress: j
+29.8792 	DATA 	Keypress: k
+29.9127 	DATA 	Keypress: d
+30.0650 	DATA 	Keypress: a
+30.2500 	DATA 	Keypress: return
+30.4743 	DATA 	Keypress: d
+30.5937 	DATA 	Keypress: a
+30.6472 	DATA 	Keypress: s
+30.6504 	DATA 	Keypress: j
+30.6530 	DATA 	Keypress: h
+30.8342 	DATA 	Keypress: k
+31.0185 	DATA 	Keypress: d
+32.4508 	DATA 	Mouse: Left button down, pos=(712,75)
+33.0202 	EXP 	window1: mouseVisible = True
+33.0236 	DEBUG 	Saving data for df_e1 ExperimentHandler
+33.0254 	INFO 	saved data to /Users/rebeccalurie 1/Dropbox/grad/df/df_recallonly/data/_df_e1_2021_Mar_04_1658.psydat
+33.0349 	INFO 	saved data to '/Users/rebeccalurie 1/Dropbox/grad/df/df_recallonly/data/_df_e1_2021_Mar_04_1658.csv'

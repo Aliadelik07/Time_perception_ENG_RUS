@@ -1,0 +1,83 @@
+0.5518 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'pyo', 'pygame'] (in that order).
+8.2947 	INFO 	Loaded monitor calibration from ['2019_04_18 11:35']
+9.3949 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1, 1, 1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7ff55f8c6b70>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7ff55f4e5d68>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.3952 	EXP 	window1: mouseVisible = True
+9.3953 	EXP 	window1: recordFrameIntervals = False
+9.5608 	EXP 	window1: recordFrameIntervals = True
+9.7447 	DEBUG 	Screen (0) actual frame rate measured at 59.90
+9.7448 	EXP 	window1: recordFrameIntervals = False
+10.6396 	EXP 	Created ins = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='ins', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.5)
+10.6443 	EXP 	Created con1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='con1', opacity=1, ori=0.0, pos=array([ 0. , -0.7]), rgb=UNKNOWN, text='Press the spacebar to continue.', units='norm', win=Window(...), wrapWidth=1)
+10.6570 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.5)
+11.1615 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.5)
+12.0703 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_5', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+12.0743 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_6', opacity=1, ori=0.0, pos=array([ 0. , -0.5]), rgb=UNKNOWN, text='Press enter to continue to the next problem.', units='norm', win=Window(...), wrapWidth=1)
+12.0874 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.5)
+12.4978 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4986 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4996 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5000 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5010 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5018 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5026 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5033 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5035 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.5096 	DEBUG 	Upload of Texture Font fontname complete
+12.5098 	EXP 	window1: mouseVisible = True
+12.9135 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_4', opacity=1, ori=0.0, pos=array([0. , 0.8]), rgb=UNKNOWN, text='Type your answers below. ', units='norm', win=Window(...), wrapWidth=1)
+12.9427 	EXP 	textbox: autoLog = True
+12.9427 	EXP 	ins: autoDraw = True
+14.9100 	EXP 	con1: autoDraw = True
+16.3157 	DATA 	Keypress: space
+16.3288 	EXP 	ins: autoDraw = False
+16.3288 	EXP 	con1: autoDraw = False
+16.3288 	EXP 	text: autoDraw = True
+23.5736 	DEBUG 	Read excel file with openpyxl: conditions.xlsx
+23.5787 	EXP 	Imported conditions.xlsx as conditions, 16 conditions, 3 params
+23.5858 	EXP 	Created sequence: random, trialTypes=16, nReps=1, seed=None
+23.5868 	EXP 	New trial (rep=0, index=0): {'concept': 'book', 'photo': 'book1.jpg', 'distractQ': '9 x 22 ='}
+23.5877 	EXP 	New trial (rep=0, index=1): {'concept': 'fish', 'photo': 'fish3.jpg', 'distractQ': '16 x 12 ='}
+23.5896 	EXP 	New trial (rep=0, index=2): {'concept': 'horse', 'photo': 'horse2.jpg', 'distractQ': '18 x 61 ='}
+23.5911 	EXP 	New trial (rep=0, index=3): {'concept': 'train', 'photo': 'train1.jpg', 'distractQ': '96 x 22 ='}
+23.5924 	EXP 	New trial (rep=0, index=4): {'concept': 'bench', 'photo': 'bench1.jpg', 'distractQ': '18 x 74 ='}
+23.5935 	EXP 	New trial (rep=0, index=5): {'concept': 'grapes', 'photo': 'grapes1.jpg', 'distractQ': '37 x 63 ='}
+23.5944 	EXP 	New trial (rep=0, index=6): {'concept': 'banana', 'photo': 'banana1.jpg', 'distractQ': '84 x 54 ='}
+23.5952 	EXP 	New trial (rep=0, index=7): {'concept': 'fox', 'photo': 'fox1.jpg', 'distractQ': '74 x 57 ='}
+23.5960 	EXP 	New trial (rep=0, index=8): {'concept': 'elephant', 'photo': 'elephant3.jpg', 'distractQ': '51 x 65 ='}
+23.5966 	EXP 	New trial (rep=0, index=9): {'concept': 'chairs', 'photo': 'chairs2.jpg', 'distractQ': '13 x 47 ='}
+23.5971 	EXP 	New trial (rep=0, index=10): {'concept': 'phone', 'photo': 'phone1.jpg', 'distractQ': '86 x 12 ='}
+23.5978 	EXP 	New trial (rep=0, index=11): {'concept': 'bridge', 'photo': 'bridge1.jpg', 'distractQ': '94 x 64 ='}
+23.5984 	EXP 	New trial (rep=0, index=12): {'concept': 'lion', 'photo': 'lion1.jpg', 'distractQ': '11 x 83 ='}
+23.5994 	EXP 	New trial (rep=0, index=13): {'concept': 'rabbit', 'photo': 'rabbit1.jpg', 'distractQ': '25 x 88 ='}
+23.6002 	EXP 	New trial (rep=0, index=14): {'concept': 'cat', 'photo': 'cat1.jpg', 'distractQ': '77 x 21 ='}
+23.6009 	EXP 	New trial (rep=0, index=15): {'concept': 'turtle', 'photo': 'turtle3.jpg', 'distractQ': '80 x 11 ='}
+23.6106 	DATA 	Keypress: space
+23.6203 	EXP 	text: autoDraw = False
+23.6203 	EXP 	text_3: autoDraw = True
+26.8587 	DEBUG 	Read excel file with openpyxl: conditions.xlsx
+26.8625 	EXP 	Imported conditions.xlsx as conditions, 16 conditions, 3 params
+26.8630 	EXP 	Created sequence: random, trialTypes=16, nReps=1, seed=None
+26.8634 	EXP 	New trial (rep=0, index=0): {'concept': 'bear', 'photo': 'bear1.jpg', 'distractQ': '49 x 43 ='}
+26.8639 	EXP 	New trial (rep=0, index=1): {'concept': 'alligator', 'photo': 'alligator1.jpg', 'distractQ': '47 x 24 ='}
+26.8643 	EXP 	New trial (rep=0, index=2): {'concept': 'bird', 'photo': 'bird3.jpg', 'distractQ': '17 x 87 ='}
+26.8647 	EXP 	New trial (rep=0, index=3): {'concept': 'mouse', 'photo': 'mouse2.jpg', 'distractQ': '26 x 23 ='}
+26.8651 	EXP 	New trial (rep=0, index=4): {'concept': 'apples', 'photo': 'apples4.jpg', 'distractQ': '68 x 47 ='}
+26.8655 	EXP 	New trial (rep=0, index=5): {'concept': 'frog', 'photo': 'frog1.jpg', 'distractQ': '63 x 58 ='}
+26.8659 	EXP 	New trial (rep=0, index=6): {'concept': 'car', 'photo': 'car1.jpg', 'distractQ': '77 x 21 ='}
+26.8663 	EXP 	New trial (rep=0, index=7): {'concept': 'carrots', 'photo': 'carrots1.jpg', 'distractQ': '44 x 4 ='}
+26.8667 	EXP 	New trial (rep=0, index=8): {'concept': 'pineapple', 'photo': 'pineapple1.jpg', 'distractQ': '44 x 75 ='}
+26.8671 	EXP 	New trial (rep=0, index=9): {'concept': 'strawberries', 'photo': 'strawberries4.jpg', 'distractQ': '14 x 38 ='}
+26.8675 	EXP 	New trial (rep=0, index=10): {'concept': 'bike', 'photo': 'bike3.jpg', 'distractQ': '25 x 17 ='}
+26.8678 	EXP 	New trial (rep=0, index=11): {'concept': 'pie', 'photo': 'pie1.jpg', 'distractQ': '82 x 31 ='}
+26.8683 	EXP 	New trial (rep=0, index=12): {'concept': 'leaves', 'photo': 'leaves1.jpg', 'distractQ': '87 x 7 ='}
+26.8687 	EXP 	New trial (rep=0, index=13): {'concept': 'camel', 'photo': 'camel1.jpg', 'distractQ': '44 x 84 ='}
+26.8691 	EXP 	New trial (rep=0, index=14): {'concept': 'whale', 'photo': 'whale1.jpg', 'distractQ': '5 x 57 ='}
+26.8695 	EXP 	New trial (rep=0, index=15): {'concept': 'tree', 'photo': 'tree1.jpg', 'distractQ': '9 x 54 ='}
+26.8806 	DEBUG 	Read excel file with openpyxl: conditions.xlsx
+26.8840 	EXP 	Imported conditions.xlsx as conditions, 32 conditions, 3 params
+26.8844 	EXP 	Created sequence: random, trialTypes=32, nReps=1, seed=None
+26.8848 	EXP 	New trial (rep=0, index=0): {'concept': 'car', 'photo': 'car1.jpg', 'distractQ': '77 x 21 ='}
+27.4412 	EXP 	window1: mouseVisible = True
+27.4433 	DEBUG 	Saving data for df_e1 ExperimentHandler
+27.4451 	INFO 	saved data to /Users/rebeccalurie 1/Dropbox/grad/df/df_recallonly/data/_df_e1_2021_Mar_08_1215.psydat
+27.4500 	INFO 	saved data to '/Users/rebeccalurie 1/Dropbox/grad/df/df_recallonly/data/_df_e1_2021_Mar_08_1215.csv'
