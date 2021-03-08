@@ -272,7 +272,7 @@ function experimentInit() {
     text: 'Press enter to continue to the next problem.',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.5)], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.7)], height: 0.05,  wrapWidth: 1.5, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
     depth: -2.0 
   });
