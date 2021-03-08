@@ -113,6 +113,8 @@ psychoJS.start({
 
 psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DEBUG);
 
+
+var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -132,6 +134,40 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
+
+var consentClock;
+var instructionsClock;
+var key_resp;
+var ins;
+var con1;
+var grp;
+var all_rows;
+var b1_insClock;
+var text;
+var key_resp_5;
+var b1Clock;
+var image;
+var key_resp_2;
+var b2_insClock;
+var text_3;
+var key_resp_6;
+var b2Clock;
+var image_2;
+var key_resp_4;
+var distClock;
+var key_resp_8;
+var text_5;
+var text_6;
+var test_insClock;
+var text_2;
+var key_resp_3;
+var testClock;
+var textbox;
+var input;
+var text_4;
+var debriefClock;
+var globalClock;
+var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "consent"
   consentClock = new util.Clock();
@@ -172,7 +208,6 @@ function experimentInit() {
                   return s;
           }
   
-          import * as copy from 'copy';
   var all_rows, grp;
   if ((expInfo["condition"] === "1")) {
       grp = "cv";
@@ -323,6 +358,11 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
+
+var t;
+var frameN;
+var continueRoutine;
+var consentComponents;
 function consentRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'consent'-------
@@ -341,6 +381,7 @@ function consentRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function consentRoutineEachFrame(snapshot) {
   return function () {
@@ -375,6 +416,7 @@ function consentRoutineEachFrame(snapshot) {
   };
 }
 
+
 function consentRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'consent'-------
@@ -390,6 +432,9 @@ function consentRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_allKeys;
+var instructionsComponents;
 function instructionsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'instructions'-------
@@ -414,6 +459,7 @@ function instructionsRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function instructionsRoutineEachFrame(snapshot) {
   return function () {
@@ -492,6 +538,7 @@ function instructionsRoutineEachFrame(snapshot) {
   };
 }
 
+
 function instructionsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instructions'-------
@@ -514,6 +561,9 @@ function instructionsRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_5_allKeys;
+var b1_insComponents;
 function b1_insRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'b1_ins'-------
@@ -537,6 +587,7 @@ function b1_insRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function b1_insRoutineEachFrame(snapshot) {
   return function () {
@@ -605,6 +656,7 @@ function b1_insRoutineEachFrame(snapshot) {
   };
 }
 
+
 function b1_insRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'b1_ins'-------
@@ -627,6 +679,9 @@ function b1_insRoutineEnd(snapshot) {
   };
 }
 
+
+var trials;
+var currentLoop;
 function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
@@ -653,12 +708,15 @@ function trialsLoopBegin(trialsLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_2;
 function trials_2LoopBegin(trials_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_2 = new TrialHandler({
@@ -685,12 +743,15 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_2);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_3;
 function trials_3LoopBegin(trials_3LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_3 = new TrialHandler({
@@ -717,12 +778,16 @@ function trials_3LoopBegin(trials_3LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_3LoopEnd() {
   psychoJS.experiment.removeLoop(trials_3);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var _key_resp_2_allKeys;
+var b1Components;
 function b1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'b1'-------
@@ -747,6 +812,7 @@ function b1RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function b1RoutineEachFrame(snapshot) {
   return function () {
@@ -815,6 +881,7 @@ function b1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function b1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'b1'-------
@@ -837,6 +904,9 @@ function b1RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_6_allKeys;
+var b2_insComponents;
 function b2_insRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'b2_ins'-------
@@ -860,6 +930,7 @@ function b2_insRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function b2_insRoutineEachFrame(snapshot) {
   return function () {
@@ -928,6 +999,7 @@ function b2_insRoutineEachFrame(snapshot) {
   };
 }
 
+
 function b2_insRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'b2_ins'-------
@@ -950,6 +1022,9 @@ function b2_insRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_4_allKeys;
+var b2Components;
 function b2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'b2'-------
@@ -974,6 +1049,7 @@ function b2RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function b2RoutineEachFrame(snapshot) {
   return function () {
@@ -1042,6 +1118,7 @@ function b2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function b2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'b2'-------
@@ -1064,6 +1141,10 @@ function b2RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_8_allKeys;
+var startTime;
+var distComponents;
 function distRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'dist'-------
@@ -1093,6 +1174,7 @@ function distRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function distRoutineEachFrame(snapshot) {
   return function () {
@@ -1176,6 +1258,7 @@ function distRoutineEachFrame(snapshot) {
   };
 }
 
+
 function distRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'dist'-------
@@ -1198,6 +1281,9 @@ function distRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_3_allKeys;
+var test_insComponents;
 function test_insRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'test_ins'-------
@@ -1221,6 +1307,7 @@ function test_insRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function test_insRoutineEachFrame(snapshot) {
   return function () {
@@ -1289,6 +1376,7 @@ function test_insRoutineEachFrame(snapshot) {
   };
 }
 
+
 function test_insRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'test_ins'-------
@@ -1311,6 +1399,9 @@ function test_insRoutineEnd(snapshot) {
   };
 }
 
+
+var _input_allKeys;
+var testComponents;
 function testRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'test'-------
@@ -1336,6 +1427,7 @@ function testRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function testRoutineEachFrame(snapshot) {
   return function () {
@@ -1412,6 +1504,7 @@ function testRoutineEachFrame(snapshot) {
   };
 }
 
+
 function testRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'test'-------
@@ -1434,6 +1527,8 @@ function testRoutineEnd(snapshot) {
   };
 }
 
+
+var debriefComponents;
 function debriefRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'debrief'-------
@@ -1452,6 +1547,7 @@ function debriefRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
+
 
 function debriefRoutineEachFrame(snapshot) {
   return function () {
@@ -1486,6 +1582,7 @@ function debriefRoutineEachFrame(snapshot) {
   };
 }
 
+
 function debriefRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'debrief'-------
@@ -1500,6 +1597,7 @@ function debriefRoutineEnd(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
@@ -1523,12 +1621,14 @@ function endLoopIteration(scheduler, snapshot) {
   };
 }
 
+
 function importConditions(currentLoop) {
   return function () {
     psychoJS.importAttributes(currentLoop.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
+
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
