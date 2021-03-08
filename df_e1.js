@@ -87,7 +87,7 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     {'name': 'leaves1.jpg', 'path': 'leaves1.jpg'},
-    {'name': 'conditions.xlsx', 'path': 'conditions.xlsx'},
+    {'name': 'conditions.csv', 'path': 'conditions.csv'},
     {'name': 'chairs2.jpg', 'path': 'chairs2.jpg'},
     {'name': 'car1.jpg', 'path': 'car1.jpg'},
     {'name': 'bench1.jpg', 'path': 'bench1.jpg'},
@@ -696,7 +696,7 @@ function trialsLoopBegin(trialsLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'conditions.xlsx', all_rows.slice(0, 16)),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'conditions.csv', all_rows.slice(0, 16)),
     seed: undefined, name: 'trials'
   });
   psychoJS.experiment.addLoop(trials); // add the loop to the experiment
@@ -730,7 +730,7 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'conditions.xlsx', all_rows.slice(16)),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'conditions.csv', all_rows.slice(16)),
     seed: undefined, name: 'trials_2'
   });
   psychoJS.experiment.addLoop(trials_2); // add the loop to the experiment
@@ -764,7 +764,7 @@ function trials_3LoopBegin(trials_3LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'conditions.xlsx',
+    trialList: 'conditions.csv',
     seed: undefined, name: 'trials_3'
   });
   psychoJS.experiment.addLoop(trials_3); // add the loop to the experiment

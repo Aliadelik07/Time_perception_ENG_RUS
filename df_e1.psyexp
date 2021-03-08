@@ -107,10 +107,10 @@
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="if expInfo['condition'] == '1':&amp;#10;    grp = 'cv'&amp;#10;    thisExp.addData('condition', grp)&amp;#10;else:&amp;#10;    grp = 'vv'&amp;#10;    thisExp.addData('condition', grp)&amp;#10;&amp;#10;import copy&amp;#10;&amp;#10;all_rows = list(range(32))&amp;#10;shuffle(all_rows)" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        import * as copy from 'copy';&amp;#10;var all_rows, grp;&amp;#10;if ((expInfo[&quot;condition&quot;] === &quot;1&quot;)) {&amp;#10;    grp = &quot;cv&quot;;&amp;#10;    thisExp.addData(&quot;condition&quot;, grp);&amp;#10;} else {&amp;#10;    grp = &quot;vv&quot;;&amp;#10;    thisExp.addData(&quot;condition&quot;, grp);&amp;#10;}&amp;#10;all_rows = list(range(32));&amp;#10;shuffle(all_rows);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;var all_rows, grp;&amp;#10;if ((expInfo[&quot;condition&quot;] === &quot;1&quot;)) {&amp;#10;    grp = &quot;cv&quot;;&amp;#10;    thisExp.addData(&quot;condition&quot;, grp);&amp;#10;} else {&amp;#10;    grp = &quot;vv&quot;;&amp;#10;    thisExp.addData(&quot;condition&quot;, grp);&amp;#10;}&amp;#10;all_rows = list(range(32));&amp;#10;shuffle(all_rows);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -559,8 +559,8 @@
     <Routine name="b1_ins"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="$all_rows[:16]" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'concept': 'leaves', 'photo': 'leaves1.jpg', 'ins': 'You will be viewing an assortment of artwork. For each piece of art, please take a photo. Press the spacebar when you are ready to move on to the next piece.'}, {'concept': 'bird', 'photo': 'bird3.jpg', 'ins': 'You will be viewing an assortment of artwork. Press the spacebar when you are ready to move on to the next piece.'}, {'concept': 'cat', 'photo': 'cat1.jpg', 'ins': None}, {'concept': 'bike', 'photo': 'bike3.jpg', 'ins': None}, {'concept': 'bear', 'photo': 'bear1.jpg', 'ins': None}, {'concept': 'apples', 'photo': 'apples4.jpg', 'ins': None}, {'concept': 'lion', 'photo': 'lion1.jpg', 'ins': None}, {'concept': 'elephant', 'photo': 'elephant3.jpg', 'ins': None}, {'concept': 'train', 'photo': 'train1.jpg', 'ins': None}, {'concept': 'banana', 'photo': 'banana1.jpg', 'ins': None}, {'concept': 'strawberries', 'photo': 'strawberries4.jpg', 'ins': None}, {'concept': 'tree', 'photo': 'tree1.jpg', 'ins': None}, {'concept': 'fish', 'photo': 'fish3.jpg', 'ins': None}, {'concept': 'turtle', 'photo': 'turtle3.jpg', 'ins': None}, {'concept': 'horse', 'photo': 'horse2.jpg', 'ins': None}, {'concept': 'bench', 'photo': 'bench1.jpg', 'ins': None}, {'concept': 'book', 'photo': 'book1.jpg', 'ins': None}, {'concept': 'bridge', 'photo': 'bridge1.jpg', 'ins': None}, {'concept': 'car', 'photo': 'car1.jpg', 'ins': None}, {'concept': 'fox', 'photo': 'fox1.jpg', 'ins': None}, {'concept': 'frog', 'photo': 'frog1.jpg', 'ins': None}, {'concept': 'phone', 'photo': 'phone1.jpg', 'ins': None}, {'concept': 'pineapple', 'photo': 'pineapple1.jpg', 'ins': None}, {'concept': 'whale', 'photo': 'whale1.jpg', 'ins': None}, {'concept': 'pie', 'photo': 'pie1.jpg', 'ins': None}, {'concept': 'rabbit', 'photo': 'rabbit1.jpg', 'ins': None}, {'concept': 'camel', 'photo': 'camel1.jpg', 'ins': None}, {'concept': 'mouse', 'photo': 'mouse2.jpg', 'ins': None}, {'concept': 'chairs', 'photo': 'chairs2.jpg', 'ins': None}, {'concept': 'carrots', 'photo': 'carrots1.jpg', 'ins': None}, {'concept': 'alligator', 'photo': 'alligator1.jpg', 'ins': None}, {'concept': 'grapes', 'photo': 'grapes1.jpg', 'ins': None}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions.xlsx" valType="file"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -574,7 +574,7 @@
     <LoopInitiator loopType="TrialHandler" name="trials_2">
       <Param name="Selected rows" updates="None" val="$all_rows[16:]" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions.xlsx" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="conditions.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -587,7 +587,7 @@
     <LoopInitiator loopType="TrialHandler" name="trials_3">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions.xlsx" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="conditions.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
