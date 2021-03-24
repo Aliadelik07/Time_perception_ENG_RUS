@@ -86,39 +86,39 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'apples4.jpg', 'path': 'apples4.jpg'},
-    {'name': 'bench1.jpg', 'path': 'bench1.jpg'},
-    {'name': 'frog1.jpg', 'path': 'frog1.jpg'},
-    {'name': 'bird3.jpg', 'path': 'bird3.jpg'},
-    {'name': 'pineapple1.jpg', 'path': 'pineapple1.jpg'},
-    {'name': 'conditions.csv', 'path': 'conditions.csv'},
-    {'name': 'turtle3.jpg', 'path': 'turtle3.jpg'},
-    {'name': 'rabbit1.jpg', 'path': 'rabbit1.jpg'},
-    {'name': 'lion1.jpg', 'path': 'lion1.jpg'},
-    {'name': 'bike3.jpg', 'path': 'bike3.jpg'},
-    {'name': 'phone1.jpg', 'path': 'phone1.jpg'},
-    {'name': 'book1.jpg', 'path': 'book1.jpg'},
-    {'name': 'camel1.jpg', 'path': 'camel1.jpg'},
-    {'name': 'carrots1.jpg', 'path': 'carrots1.jpg'},
-    {'name': 'car1.jpg', 'path': 'car1.jpg'},
-    {'name': 'fish3.jpg', 'path': 'fish3.jpg'},
-    {'name': 'pie1.jpg', 'path': 'pie1.jpg'},
-    {'name': 'alligator1.jpg', 'path': 'alligator1.jpg'},
-    {'name': 'elephant3.jpg', 'path': 'elephant3.jpg'},
-    {'name': 'strawberries4.jpg', 'path': 'strawberries4.jpg'},
-    {'name': 'fox1.jpg', 'path': 'fox1.jpg'},
     {'name': 'bear1.jpg', 'path': 'bear1.jpg'},
-    {'name': 'chairs2.jpg', 'path': 'chairs2.jpg'},
+    {'name': 'conditions.csv', 'path': 'conditions.csv'},
+    {'name': 'bridge1.jpg', 'path': 'bridge1.jpg'},
+    {'name': 'camel1.jpg', 'path': 'camel1.jpg'},
+    {'name': 'alligator1.jpg', 'path': 'alligator1.jpg'},
+    {'name': 'strawberries4.jpg', 'path': 'strawberries4.jpg'},
+    {'name': 'pie1.jpg', 'path': 'pie1.jpg'},
     {'name': 'leaves1.jpg', 'path': 'leaves1.jpg'},
+    {'name': 'book1.jpg', 'path': 'book1.jpg'},
+    {'name': 'chairs2.jpg', 'path': 'chairs2.jpg'},
+    {'name': 'apples4.jpg', 'path': 'apples4.jpg'},
+    {'name': 'mouse2.jpg', 'path': 'mouse2.jpg'},
+    {'name': 'rabbit1.jpg', 'path': 'rabbit1.jpg'},
+    {'name': 'bird3.jpg', 'path': 'bird3.jpg'},
+    {'name': 'train1.jpg', 'path': 'train1.jpg'},
+    {'name': 'elephant3.jpg', 'path': 'elephant3.jpg'},
+    {'name': 'car1.jpg', 'path': 'car1.jpg'},
+    {'name': 'cat1.jpg', 'path': 'cat1.jpg'},
     {'name': 'grapes1.jpg', 'path': 'grapes1.jpg'},
     {'name': 'horse2.jpg', 'path': 'horse2.jpg'},
-    {'name': 'whale1.jpg', 'path': 'whale1.jpg'},
-    {'name': 'train1.jpg', 'path': 'train1.jpg'},
-    {'name': 'mouse2.jpg', 'path': 'mouse2.jpg'},
+    {'name': 'pineapple1.jpg', 'path': 'pineapple1.jpg'},
+    {'name': 'fish3.jpg', 'path': 'fish3.jpg'},
+    {'name': 'bike3.jpg', 'path': 'bike3.jpg'},
+    {'name': 'turtle3.jpg', 'path': 'turtle3.jpg'},
     {'name': 'banana1.jpg', 'path': 'banana1.jpg'},
+    {'name': 'carrots1.jpg', 'path': 'carrots1.jpg'},
+    {'name': 'frog1.jpg', 'path': 'frog1.jpg'},
     {'name': 'tree1.jpg', 'path': 'tree1.jpg'},
-    {'name': 'cat1.jpg', 'path': 'cat1.jpg'},
-    {'name': 'bridge1.jpg', 'path': 'bridge1.jpg'}
+    {'name': 'fox1.jpg', 'path': 'fox1.jpg'},
+    {'name': 'lion1.jpg', 'path': 'lion1.jpg'},
+    {'name': 'whale1.jpg', 'path': 'whale1.jpg'},
+    {'name': 'bench1.jpg', 'path': 'bench1.jpg'},
+    {'name': 'phone1.jpg', 'path': 'phone1.jpg'}
   ]
 });
 
@@ -222,10 +222,10 @@ function experimentInit() {
   var all_rows, grp;
   if ((expInfo["condition"] === "1")) {
       grp = "cv";
-      thisExp.addData("condition", grp);
+      psychoJS.experiment.addData("condition", grp);
   } else {
       grp = "vv";
-      thisExp.addData("condition", grp);
+      psychoJS.experiment.addData("condition", grp);
   }
   all_rows = list(range(32));
   shuffle(all_rows);
