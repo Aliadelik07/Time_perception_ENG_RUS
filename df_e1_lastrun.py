@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.2),
-    on Mon Mar  8 12:26:13 2021
+    on Mon Mar  8 13:11:22 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -125,6 +125,15 @@ key_resp_5 = keyboard.Keyboard()
 
 # Initialize components for Routine "b1"
 b1Clock = core.Clock()
+image = visual.ImageStim(
+    win=win,
+    name='image', 
+    image='sin', mask=None,
+    ori=0.0, pos=(0, 0), size=(1, 1.6),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=0.0)
+key_resp_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "b2_ins"
 b2_insClock = core.Clock()
@@ -139,6 +148,15 @@ key_resp_6 = keyboard.Keyboard()
 
 # Initialize components for Routine "b2"
 b2Clock = core.Clock()
+image_2 = visual.ImageStim(
+    win=win,
+    name='image_2', 
+    image='sin', mask=None,
+    ori=0.0, pos=(0, 0), size=(1, 1.6),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=0.0)
+key_resp_4 = keyboard.Keyboard()
 
 # Initialize components for Routine "dist"
 distClock = core.Clock()
@@ -153,7 +171,7 @@ text_5 = visual.TextStim(win=win, name='text_5',
 text_6 = visual.TextStim(win=win, name='text_6',
     text='Press enter to continue to the next problem.',
     font='Open Sans',
-    pos=(0, -0.5), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, -0.7), height=0.05, wrapWidth=1.5, ori=0.0, 
     color='black', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
@@ -473,7 +491,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('conditions.xlsx', selection=all_rows[:16]),
+    trialList=data.importConditions('conditions.csv', selection=all_rows[:16]),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -492,8 +510,12 @@ for thisTrial in trials:
     # ------Prepare to start Routine "b1"-------
     continueRoutine = True
     # update component parameters for each repeat
+    image.setImage(photo)
+    key_resp_2.keys = []
+    key_resp_2.rt = []
+    _key_resp_2_allKeys = []
     # keep track of which components have finished
-    b1Components = []
+    b1Components = [image, key_resp_2]
     for thisComponent in b1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -516,6 +538,37 @@ for thisTrial in trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
+        # *image* updates
+        if image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            image.frameNStart = frameN  # exact frame index
+            image.tStart = t  # local t and not account for scr refresh
+            image.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
+            image.setAutoDraw(True)
+        
+        # *key_resp_2* updates
+        waitOnFlip = False
+        if key_resp_2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+            # keep track of start time/frame for later
+            key_resp_2.frameNStart = frameN  # exact frame index
+            key_resp_2.tStart = t  # local t and not account for scr refresh
+            key_resp_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(key_resp_2, 'tStartRefresh')  # time at next scr refresh
+            key_resp_2.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(key_resp_2.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(key_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if key_resp_2.status == STARTED and not waitOnFlip:
+            theseKeys = key_resp_2.getKeys(keyList=['space'], waitRelease=False)
+            _key_resp_2_allKeys.extend(theseKeys)
+            if len(_key_resp_2_allKeys):
+                key_resp_2.keys = _key_resp_2_allKeys[-1].name  # just the last key pressed
+                key_resp_2.rt = _key_resp_2_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -537,6 +590,16 @@ for thisTrial in trials:
     for thisComponent in b1Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    trials.addData('image.started', image.tStartRefresh)
+    trials.addData('image.stopped', image.tStopRefresh)
+    # check responses
+    if key_resp_2.keys in ['', [], None]:  # No response was made
+        key_resp_2.keys = None
+    trials.addData('key_resp_2.keys',key_resp_2.keys)
+    if key_resp_2.keys != None:  # we had a response
+        trials.addData('key_resp_2.rt', key_resp_2.rt)
+    trials.addData('key_resp_2.started', key_resp_2.tStartRefresh)
+    trials.addData('key_resp_2.stopped', key_resp_2.tStopRefresh)
     # the Routine "b1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -643,7 +706,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_2 = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('conditions.xlsx', selection=all_rows[16:]),
+    trialList=data.importConditions('conditions.csv', selection=all_rows[16:]),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -662,8 +725,12 @@ for thisTrial_2 in trials_2:
     # ------Prepare to start Routine "b2"-------
     continueRoutine = True
     # update component parameters for each repeat
+    image_2.setImage(photo)
+    key_resp_4.keys = []
+    key_resp_4.rt = []
+    _key_resp_4_allKeys = []
     # keep track of which components have finished
-    b2Components = []
+    b2Components = [image_2, key_resp_4]
     for thisComponent in b2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -686,6 +753,37 @@ for thisTrial_2 in trials_2:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
+        # *image_2* updates
+        if image_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            image_2.frameNStart = frameN  # exact frame index
+            image_2.tStart = t  # local t and not account for scr refresh
+            image_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image_2, 'tStartRefresh')  # time at next scr refresh
+            image_2.setAutoDraw(True)
+        
+        # *key_resp_4* updates
+        waitOnFlip = False
+        if key_resp_4.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+            # keep track of start time/frame for later
+            key_resp_4.frameNStart = frameN  # exact frame index
+            key_resp_4.tStart = t  # local t and not account for scr refresh
+            key_resp_4.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(key_resp_4, 'tStartRefresh')  # time at next scr refresh
+            key_resp_4.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(key_resp_4.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(key_resp_4.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if key_resp_4.status == STARTED and not waitOnFlip:
+            theseKeys = key_resp_4.getKeys(keyList=['space'], waitRelease=False)
+            _key_resp_4_allKeys.extend(theseKeys)
+            if len(_key_resp_4_allKeys):
+                key_resp_4.keys = _key_resp_4_allKeys[-1].name  # just the last key pressed
+                key_resp_4.rt = _key_resp_4_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -707,6 +805,16 @@ for thisTrial_2 in trials_2:
     for thisComponent in b2Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    trials_2.addData('image_2.started', image_2.tStartRefresh)
+    trials_2.addData('image_2.stopped', image_2.tStopRefresh)
+    # check responses
+    if key_resp_4.keys in ['', [], None]:  # No response was made
+        key_resp_4.keys = None
+    trials_2.addData('key_resp_4.keys',key_resp_4.keys)
+    if key_resp_4.keys != None:  # we had a response
+        trials_2.addData('key_resp_4.rt', key_resp_4.rt)
+    trials_2.addData('key_resp_4.started', key_resp_4.tStartRefresh)
+    trials_2.addData('key_resp_4.stopped', key_resp_4.tStopRefresh)
     # the Routine "b2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -717,7 +825,7 @@ for thisTrial_2 in trials_2:
 # set up handler to look after randomisation of conditions etc
 trials_3 = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('conditions.xlsx'),
+    trialList=data.importConditions('conditions.csv'),
     seed=None, name='trials_3')
 thisExp.addLoop(trials_3)  # add the loop to the experiment
 thisTrial_3 = trials_3.trialList[0]  # so we can initialise stimuli with some values
