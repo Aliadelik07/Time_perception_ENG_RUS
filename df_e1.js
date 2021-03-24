@@ -180,6 +180,7 @@ var text_4;
 var polygon;
 var button_text;
 var mouse;
+var inputText;
 var debriefClock;
 var globalClock;
 var routineTimer;
@@ -346,7 +347,7 @@ function experimentInit() {
     bold: false, italic: false,
     opacity: undefined,
     padding: undefined,
-    editable: true,
+    editable: false,
     multiline: true,
     anchor: 'top-center',
     depth: 0.0 
@@ -367,7 +368,7 @@ function experimentInit() {
   
   polygon = new visual.Rect ({
     win: psychoJS.window, name: 'polygon', 
-    width: [1, 0.5][0], height: [1, 0.5][1],
+    width: [0.1, 0.05][0], height: [0.1, 0.05][1],
     ori: 0.0, pos: [0, (- 0.8)],
     lineWidth: 1.0, lineColor: new util.Color('black'),
     fillColor: new util.Color('gray'),
@@ -380,7 +381,7 @@ function experimentInit() {
     text: 'I’m Done',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.8)], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.8)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
     depth: -4.0 
   });
@@ -389,6 +390,8 @@ function experimentInit() {
     win: psychoJS.window,
   });
   mouse.mouseClock = new util.Clock();
+  inputText = "";
+  
   // Initialize components for Routine "debrief"
   debriefClock = new util.Clock();
   // Create some handy timers
@@ -1431,6 +1434,8 @@ function test_insRoutineEnd(snapshot) {
 
 var _input_allKeys;
 var gotValidClick;
+var theseKeys;
+var shift_flag;
 var testComponents;
 function testRoutineBegin(snapshot) {
   return function () {
@@ -1446,6 +1451,9 @@ function testRoutineBegin(snapshot) {
     // setup some python lists for storing info about the mouse
     mouse.clicked_name = [];
     gotValidClick = false; // until a click is received
+    theseKeys = "";
+    shift_flag = false;
+    
     // keep track of which components have finished
     testComponents = [];
     testComponents.push(textbox);
@@ -1465,6 +1473,9 @@ function testRoutineBegin(snapshot) {
 
 var prevButtonState;
 var _mouseButtons;
+var _pj;
+var n;
+var i;
 function testRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'test'-------
@@ -1567,6 +1578,58 @@ function testRoutineEachFrame(snapshot) {
         }
       }
     }
+    var _pj;
+    function _pj_snippets(container) {
+        function in_es6(left, right) {
+            if (((right instanceof Array) || ((typeof right) === "string"))) {
+                return (right.indexOf(left) > (- 1));
+            } else {
+                if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {
+                    return right.has(left);
+                } else {
+                    return (left in right);
+                }
+            }
+        }
+        container["in_es6"] = in_es6;
+        return container;
+    }
+    _pj = {};
+    _pj_snippets(_pj);
+    n = theseKeys.length;
+    i = 0;
+    while ((i < n)) {
+        if (((theseKeys[i] === "return") && (inputText.length > 1))) {
+            continueRoutine = false;
+            break;
+        } else {
+            if ((theseKeys[i] === "backspace")) {
+                inputText = inputText.slice(0, (- 1));
+                i = (i + 1);
+            } else {
+                if ((theseKeys[i] === "space")) {
+                    inputText += " ";
+                    i = (i + 1);
+                } else {
+                    if (_pj.in_es6(theseKeys[i], ["lshift", "rshift"])) {
+                        shift_flag = true;
+                        i = (i + 1);
+                    } else {
+                        if ((theseKeys[i].length === 1)) {
+                            if (shift_flag) {
+                                inputText += chr((ord(theseKeys[i]) - ord(" ")));
+                                shift_flag = false;
+                            } else {
+                                inputText += theseKeys[i];
+                            }
+                        }
+                        i = (i + 1);
+                    }
+                }
+            }
+        }
+    }
+    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1603,7 +1666,6 @@ function testRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('textbox.text', textbox.text);
     psychoJS.experiment.addData('input.keys', input.keys);
     if (typeof input.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('input.rt', input.rt);
@@ -1620,6 +1682,10 @@ function testRoutineEnd(snapshot) {
     psychoJS.experiment.addData('mouse.rightButton', _mouseButtons[2]);
     if (mouse.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
+    psychoJS.experiment.addData("inputText", inputText);
+    psychoJS.experiment.addData("RT", t);
+    inputText = "";
+    
     // the Routine "test" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -1734,6 +1800,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
