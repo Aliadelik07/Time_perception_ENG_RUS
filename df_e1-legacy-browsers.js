@@ -1496,7 +1496,7 @@ function testRoutineEachFrame(snapshot) {
 
     
     if (textbox.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      textbox.setText('', false);
+      textbox.setText(inputText, false);
     }
     
     // *input* updates
@@ -1678,8 +1678,8 @@ function testRoutineEnd(snapshot) {
     psychoJS.experiment.addData('mouse.rightButton', _mouseButtons[2]);
     if (mouse.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
-    thisExp.addData("inputText", inputText);
-    thisExp.addData("RT", t);
+    psychoJS.experiment.addData("inputText", inputText);
+    psychoJS.experiment.addData("RT", t);
     inputText = "";
     
     // the Routine "test" was not non-slip safe, so reset the non-slip timer
