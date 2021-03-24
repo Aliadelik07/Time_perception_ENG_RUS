@@ -74,7 +74,7 @@ var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2021.1.3';
+  expInfo['psychopyVersion'] = '2021.2';
   expInfo['OS'] = window.navigator.platform;
 
   // store frame rate of monitor if we can measure it successfully
@@ -258,6 +258,8 @@ function experimentInit() {
   status = ["down", "up"];
   StepsCount = [0, 0];
   Experiment_Round = 1;
+  
+  Array.prototype.append = [].push 
   
   // Initialize components for Routine "SecondPhase_Welcome"
   SecondPhase_WelcomeClock = new util.Clock();
