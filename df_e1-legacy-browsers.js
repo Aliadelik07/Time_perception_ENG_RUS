@@ -166,6 +166,9 @@ var testClock;
 var textbox;
 var input;
 var text_4;
+var polygon;
+var button_text;
+var mouse;
 var debriefClock;
 var globalClock;
 var routineTimer;
@@ -348,9 +351,33 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0.8], height: 0.1,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
-    depth: -3.0 
+    depth: -2.0 
   });
   
+  polygon = new visual.Rect ({
+    win: psychoJS.window, name: 'polygon', 
+    width: [1, 0.5][0], height: [1, 0.5][1],
+    ori: 0.0, pos: [0, (- 0.8)],
+    lineWidth: 1.0, lineColor: new util.Color('black'),
+    fillColor: new util.Color('gray'),
+    opacity: undefined, depth: -3, interpolate: true,
+  });
+  
+  button_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'button_text',
+    text: 'I’m Done',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, (- 0.8)], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('black'),  opacity: undefined,
+    depth: -4.0 
+  });
+  
+  mouse = new core.Mouse({
+    win: psychoJS.window,
+  });
+  mouse.mouseClock = new util.Clock();
   // Initialize components for Routine "debrief"
   debriefClock = new util.Clock();
   // Create some handy timers
@@ -1403,6 +1430,7 @@ function test_insRoutineEnd(snapshot) {
 
 
 var _input_allKeys;
+var gotValidClick;
 var testComponents;
 function testRoutineBegin(snapshot) {
   return function () {
@@ -1412,15 +1440,20 @@ function testRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    textbox.setText('');
     input.keys = undefined;
     input.rt = undefined;
     _input_allKeys = [];
+    // setup some python lists for storing info about the mouse
+    mouse.clicked_name = [];
+    gotValidClick = false; // until a click is received
     // keep track of which components have finished
     testComponents = [];
     testComponents.push(textbox);
     testComponents.push(input);
     testComponents.push(text_4);
+    testComponents.push(polygon);
+    testComponents.push(button_text);
+    testComponents.push(mouse);
     
     testComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -1431,6 +1464,8 @@ function testRoutineBegin(snapshot) {
 }
 
 
+var prevButtonState;
+var _mouseButtons;
 function testRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'test'-------
@@ -1449,6 +1484,10 @@ function testRoutineEachFrame(snapshot) {
     }
 
     
+    if (textbox.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      textbox.setText('', false);
+    }
+    
     // *input* updates
     if (t >= 0.0 && input.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -1465,8 +1504,8 @@ function testRoutineEachFrame(snapshot) {
       let theseKeys = input.getKeys({keyList: [], waitRelease: false});
       _input_allKeys = _input_allKeys.concat(theseKeys);
       if (_input_allKeys.length > 0) {
-        input.keys = _input_allKeys[_input_allKeys.length - 1].name;  // just the last key pressed
-        input.rt = _input_allKeys[_input_allKeys.length - 1].rt;
+        input.keys = _input_allKeys.map((key) => key.name);  // storing all keys
+        input.rt = _input_allKeys.map((key) => key.rt);
       }
     }
     
@@ -1480,6 +1519,55 @@ function testRoutineEachFrame(snapshot) {
       text_4.setAutoDraw(true);
     }
 
+    
+    // *polygon* updates
+    if (t >= 0.0 && polygon.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      polygon.tStart = t;  // (not accounting for frame time here)
+      polygon.frameNStart = frameN;  // exact frame index
+      
+      polygon.setAutoDraw(true);
+    }
+
+    
+    // *button_text* updates
+    if (t >= 0.0 && button_text.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      button_text.tStart = t;  // (not accounting for frame time here)
+      button_text.frameNStart = frameN;  // exact frame index
+      
+      button_text.setAutoDraw(true);
+    }
+
+    // *mouse* updates
+    if (t >= 0.5 && mouse.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      mouse.tStart = t;  // (not accounting for frame time here)
+      mouse.frameNStart = frameN;  // exact frame index
+      
+      mouse.status = PsychoJS.Status.STARTED;
+      mouse.mouseClock.reset();
+      prevButtonState = mouse.getPressed();  // if button is down already this ISN'T a new click
+      }
+    if (mouse.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
+      _mouseButtons = mouse.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          for (const obj of [polygon]) {
+            if (obj.contains(mouse)) {
+              gotValidClick = true;
+              mouse.clicked_name.push(obj.name)
+            }
+          }
+          if (gotValidClick === true) { // abort routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1507,6 +1595,7 @@ function testRoutineEachFrame(snapshot) {
 }
 
 
+var _mouseXYs;
 function testRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'test'-------
@@ -1522,6 +1611,16 @@ function testRoutineEnd(snapshot) {
         }
     
     input.stop();
+    // store data for thisExp (ExperimentHandler)
+    _mouseXYs = mouse.getPos();
+    _mouseButtons = mouse.getPressed();
+    psychoJS.experiment.addData('mouse.x', _mouseXYs[0]);
+    psychoJS.experiment.addData('mouse.y', _mouseXYs[1]);
+    psychoJS.experiment.addData('mouse.leftButton', _mouseButtons[0]);
+    psychoJS.experiment.addData('mouse.midButton', _mouseButtons[1]);
+    psychoJS.experiment.addData('mouse.rightButton', _mouseButtons[2]);
+    if (mouse.clicked_name.length > 0) {
+      psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
     // the Routine "test" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
