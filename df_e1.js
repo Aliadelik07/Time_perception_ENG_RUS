@@ -86,39 +86,39 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'bear1.jpg', 'path': 'bear1.jpg'},
-    {'name': 'conditions.csv', 'path': 'conditions.csv'},
-    {'name': 'bridge1.jpg', 'path': 'bridge1.jpg'},
-    {'name': 'camel1.jpg', 'path': 'camel1.jpg'},
-    {'name': 'alligator1.jpg', 'path': 'alligator1.jpg'},
-    {'name': 'strawberries4.jpg', 'path': 'strawberries4.jpg'},
-    {'name': 'pie1.jpg', 'path': 'pie1.jpg'},
-    {'name': 'leaves1.jpg', 'path': 'leaves1.jpg'},
-    {'name': 'book1.jpg', 'path': 'book1.jpg'},
-    {'name': 'chairs2.jpg', 'path': 'chairs2.jpg'},
-    {'name': 'apples4.jpg', 'path': 'apples4.jpg'},
-    {'name': 'mouse2.jpg', 'path': 'mouse2.jpg'},
-    {'name': 'rabbit1.jpg', 'path': 'rabbit1.jpg'},
-    {'name': 'bird3.jpg', 'path': 'bird3.jpg'},
-    {'name': 'train1.jpg', 'path': 'train1.jpg'},
-    {'name': 'elephant3.jpg', 'path': 'elephant3.jpg'},
-    {'name': 'car1.jpg', 'path': 'car1.jpg'},
-    {'name': 'cat1.jpg', 'path': 'cat1.jpg'},
-    {'name': 'grapes1.jpg', 'path': 'grapes1.jpg'},
-    {'name': 'horse2.jpg', 'path': 'horse2.jpg'},
-    {'name': 'pineapple1.jpg', 'path': 'pineapple1.jpg'},
-    {'name': 'fish3.jpg', 'path': 'fish3.jpg'},
-    {'name': 'bike3.jpg', 'path': 'bike3.jpg'},
-    {'name': 'turtle3.jpg', 'path': 'turtle3.jpg'},
-    {'name': 'banana1.jpg', 'path': 'banana1.jpg'},
-    {'name': 'carrots1.jpg', 'path': 'carrots1.jpg'},
-    {'name': 'frog1.jpg', 'path': 'frog1.jpg'},
-    {'name': 'tree1.jpg', 'path': 'tree1.jpg'},
-    {'name': 'fox1.jpg', 'path': 'fox1.jpg'},
-    {'name': 'lion1.jpg', 'path': 'lion1.jpg'},
     {'name': 'whale1.jpg', 'path': 'whale1.jpg'},
+    {'name': 'tree1.jpg', 'path': 'tree1.jpg'},
+    {'name': 'conditions.csv', 'path': 'conditions.csv'},
+    {'name': 'grapes1.jpg', 'path': 'grapes1.jpg'},
+    {'name': 'leaves1.jpg', 'path': 'leaves1.jpg'},
+    {'name': 'alligator1.jpg', 'path': 'alligator1.jpg'},
+    {'name': 'fish3.jpg', 'path': 'fish3.jpg'},
+    {'name': 'camel1.jpg', 'path': 'camel1.jpg'},
+    {'name': 'book1.jpg', 'path': 'book1.jpg'},
+    {'name': 'pineapple1.jpg', 'path': 'pineapple1.jpg'},
+    {'name': 'carrots1.jpg', 'path': 'carrots1.jpg'},
+    {'name': 'mouse2.jpg', 'path': 'mouse2.jpg'},
+    {'name': 'bird3.jpg', 'path': 'bird3.jpg'},
+    {'name': 'bike3.jpg', 'path': 'bike3.jpg'},
+    {'name': 'cat1.jpg', 'path': 'cat1.jpg'},
+    {'name': 'chairs2.jpg', 'path': 'chairs2.jpg'},
+    {'name': 'pie1.jpg', 'path': 'pie1.jpg'},
+    {'name': 'bear1.jpg', 'path': 'bear1.jpg'},
+    {'name': 'lion1.jpg', 'path': 'lion1.jpg'},
+    {'name': 'train1.jpg', 'path': 'train1.jpg'},
     {'name': 'bench1.jpg', 'path': 'bench1.jpg'},
-    {'name': 'phone1.jpg', 'path': 'phone1.jpg'}
+    {'name': 'fox1.jpg', 'path': 'fox1.jpg'},
+    {'name': 'frog1.jpg', 'path': 'frog1.jpg'},
+    {'name': 'horse2.jpg', 'path': 'horse2.jpg'},
+    {'name': 'bridge1.jpg', 'path': 'bridge1.jpg'},
+    {'name': 'turtle3.jpg', 'path': 'turtle3.jpg'},
+    {'name': 'apples4.jpg', 'path': 'apples4.jpg'},
+    {'name': 'elephant3.jpg', 'path': 'elephant3.jpg'},
+    {'name': 'phone1.jpg', 'path': 'phone1.jpg'},
+    {'name': 'rabbit1.jpg', 'path': 'rabbit1.jpg'},
+    {'name': 'banana1.jpg', 'path': 'banana1.jpg'},
+    {'name': 'strawberries4.jpg', 'path': 'strawberries4.jpg'},
+    {'name': 'car1.jpg', 'path': 'car1.jpg'}
   ]
 });
 
@@ -1599,32 +1599,27 @@ function testRoutineEachFrame(snapshot) {
     n = theseKeys.length;
     i = 0;
     while ((i < n)) {
-        if (((theseKeys[i] === "return") && (inputText.length > 1))) {
-            continueRoutine = false;
-            break;
+        if ((theseKeys[i] === "backspace")) {
+            inputText = inputText.slice(0, (- 1));
+            i = (i + 1);
         } else {
-            if ((theseKeys[i] === "backspace")) {
-                inputText = inputText.slice(0, (- 1));
+            if ((theseKeys[i] === "space")) {
+                inputText += " ";
                 i = (i + 1);
             } else {
-                if ((theseKeys[i] === "space")) {
-                    inputText += " ";
+                if (_pj.in_es6(theseKeys[i], ["lshift", "rshift"])) {
+                    shift_flag = true;
                     i = (i + 1);
                 } else {
-                    if (_pj.in_es6(theseKeys[i], ["lshift", "rshift"])) {
-                        shift_flag = true;
-                        i = (i + 1);
-                    } else {
-                        if ((theseKeys[i].length === 1)) {
-                            if (shift_flag) {
-                                inputText += chr((ord(theseKeys[i]) - ord(" ")));
-                                shift_flag = false;
-                            } else {
-                                inputText += theseKeys[i];
-                            }
+                    if ((theseKeys[i].length === 1)) {
+                        if (shift_flag) {
+                            inputText += chr((ord(theseKeys[i]) - ord(" ")));
+                            shift_flag = false;
+                        } else {
+                            inputText += theseKeys[i];
                         }
-                        i = (i + 1);
                     }
+                    i = (i + 1);
                 }
             }
         }
@@ -1682,8 +1677,8 @@ function testRoutineEnd(snapshot) {
     psychoJS.experiment.addData('mouse.rightButton', _mouseButtons[2]);
     if (mouse.clicked_name.length > 0) {
       psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
-    psychoJS.experiment.addData("inputText", inputText);
-    psychoJS.experiment.addData("RT", t);
+    thisExp.addData("inputText", inputText);
+    thisExp.addData("RT", t);
     inputText = "";
     
     // the Routine "test" was not non-slip safe, so reset the non-slip timer
