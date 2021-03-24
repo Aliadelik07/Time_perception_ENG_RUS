@@ -174,13 +174,13 @@ var test_insClock;
 var text_2;
 var key_resp_3;
 var testClock;
-var textbox;
 var input;
 var text_4;
 var polygon;
 var button_text;
 var mouse;
 var inputText;
+var text_7;
 var debriefClock;
 var globalClock;
 var routineTimer;
@@ -335,24 +335,6 @@ function experimentInit() {
   
   // Initialize components for Routine "test"
   testClock = new util.Clock();
-  textbox = new visual.TextBox({
-    win: psychoJS.window,
-    name: 'textbox',
-    text: '',
-    font: 'Open Sans',
-    pos: [0, 0.5], letterHeight: 0.05,
-    size: undefined,  units: undefined, 
-    color: 'black', colorSpace: 'rgb',
-    fillColor: undefined, borderColor: undefined,
-    bold: false, italic: false,
-    opacity: undefined,
-    padding: undefined,
-    editable: false,
-    multiline: true,
-    anchor: 'top-center',
-    depth: 0.0 
-  });
-  
   input = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   text_4 = new visual.TextStim({
@@ -363,7 +345,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0.8], height: 0.1,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
-    depth: -2.0 
+    depth: -1.0 
   });
   
   polygon = new visual.Rect ({
@@ -372,7 +354,7 @@ function experimentInit() {
     ori: 0.0, pos: [0, (- 0.8)],
     lineWidth: 1.0, lineColor: new util.Color('black'),
     fillColor: new util.Color('gray'),
-    opacity: undefined, depth: -3, interpolate: true,
+    opacity: undefined, depth: -2, interpolate: true,
   });
   
   button_text = new visual.TextStim({
@@ -383,7 +365,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, (- 0.8)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
-    depth: -4.0 
+    depth: -3.0 
   });
   
   mouse = new core.Mouse({
@@ -391,6 +373,17 @@ function experimentInit() {
   });
   mouse.mouseClock = new util.Clock();
   inputText = "";
+  
+  text_7 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_7',
+    text: '',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('black'),  opacity: undefined,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "debrief"
   debriefClock = new util.Clock();
@@ -1456,12 +1449,12 @@ function testRoutineBegin(snapshot) {
     
     // keep track of which components have finished
     testComponents = [];
-    testComponents.push(textbox);
     testComponents.push(input);
     testComponents.push(text_4);
     testComponents.push(polygon);
     testComponents.push(button_text);
     testComponents.push(mouse);
+    testComponents.push(text_7);
     
     for (const thisComponent of testComponents)
       if ('status' in thisComponent)
@@ -1483,20 +1476,6 @@ function testRoutineEachFrame(snapshot) {
     t = testClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *textbox* updates
-    if (t >= 0.0 && textbox.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      textbox.tStart = t;  // (not accounting for frame time here)
-      textbox.frameNStart = frameN;  // exact frame index
-      
-      textbox.setAutoDraw(true);
-    }
-
-    
-    if (textbox.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      textbox.setText(inputText, false);
-    }
     
     // *input* updates
     if (t >= 0.0 && input.status === PsychoJS.Status.NOT_STARTED) {
@@ -1625,6 +1604,20 @@ function testRoutineEachFrame(snapshot) {
         }
     }
     
+    
+    // *text_7* updates
+    if (t >= 0.0 && text_7.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_7.tStart = t;  // (not accounting for frame time here)
+      text_7.frameNStart = frameN;  // exact frame index
+      
+      text_7.setAutoDraw(true);
+    }
+
+    
+    if (text_7.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      text_7.setText(inputText, false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
