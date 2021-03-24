@@ -74,9 +74,8 @@ var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2020.2';
+  expInfo['psychopyVersion'] = '2021.1.3';
   expInfo['OS'] = window.navigator.platform;
-
 
   // store frame rate of monitor if we can measure it successfully
   expInfo['frameRate'] = psychoJS.window.getActualFrameRate();
@@ -119,6 +118,16 @@ var choice;
 var blackScreen3Clock;
 var responseText;
 var responseRepeat;
+var Time1;
+var Time2;
+var Seq;
+var TimeDurationExp;
+var StepsMAX;
+var Steps;
+var Bends;
+var status;
+var StepsCount;
+var Experiment_Round;
 var SecondPhase_WelcomeClock;
 var TextSecond;
 var text;
@@ -238,6 +247,17 @@ function experimentInit() {
   });
   
   responseRepeat = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  Time1 = [5.6, 4.0];
+  Time2 = [4.0, 5.6];
+  Seq = 0;
+  TimeDurationExp = (Time1[0] + Time2[0]);
+  StepsMAX = 6;
+  Steps = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4];
+  Bends = [[], []];
+  status = ["down", "up"];
+  StepsCount = [0, 0];
+  Experiment_Round = 1;
   
   // Initialize components for Routine "SecondPhase_Welcome"
   SecondPhase_WelcomeClock = new util.Clock();
@@ -620,7 +640,6 @@ function SecondPhaseLoopEnd() {
 }
 
 
-var Seq;
 var Random_SequenceComponents;
 function Random_SequenceRoutineBegin(snapshot) {
   return function () {
@@ -630,7 +649,7 @@ function Random_SequenceRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    if ((Math.random()<= 0.5)) {
+    if ((Math.random() <= 0.5)) {
         Seq = 0;
         if ((StepsCount[Seq] > 5)) {
             Seq = 1;
@@ -1253,6 +1272,10 @@ function blackScreen3RoutineEachFrame(snapshot) {
 }
 
 
+var mean1;
+var mean2;
+var meanBoth;
+var SecondStart;
 function blackScreen3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'blackScreen3'-------
@@ -1268,7 +1291,72 @@ function blackScreen3RoutineEnd(snapshot) {
         }
     
     responseRepeat.stop();
-    /* Syntax Error: Fix Python code */
+    thisExp.addData("t1", Time1[Seq]);
+    thisExp.addData("t2", Time2[Seq]);
+    if ((Seq === 0)) {
+        thisExp.addData("sequence", 56);
+    }
+    if ((Seq === 1)) {
+        thisExp.addData("sequence", 40);
+    }
+    thisExp.addData("Status", status[Seq]);
+    thisExp.addData("Step56", StepsCount[0]);
+    thisExp.addData("Step40", StepsCount[1]);
+    if (((choice.keys === "1") && (status[Seq] === "down"))) {
+        Time1[Seq] -= Steps[StepsCount[Seq]];
+        Time2[Seq] += Steps[StepsCount[Seq]];
+    } else {
+        if (((choice.keys === "1") && (status[Seq] === "up"))) {
+            Time1[Seq] -= Steps[StepsCount[Seq]];
+            Time2[Seq] += Steps[StepsCount[Seq]];
+            status[Seq] = "down";
+            if ((StepsCount[Seq] > 2)) {
+                Bends[Seq].append(Time1[Seq]);
+            }
+            StepsCount[Seq] += 1;
+        }
+    }
+    if (((choice.keys === "2") && (status[Seq] === "down"))) {
+        Time1[Seq] += Steps[StepsCount[Seq]];
+        Time2[Seq] -= Steps[StepsCount[Seq]];
+        status[Seq] = "up";
+        if ((StepsCount[Seq] > 2)) {
+            Bends[Seq].append(Time1[Seq]);
+        }
+        StepsCount[Seq] += 1;
+    } else {
+        if (((choice.keys === "2") && (status[Seq] === "up"))) {
+            Time1[Seq] += Steps[StepsCount[Seq]];
+            Time2[Seq] -= Steps[StepsCount[Seq]];
+        }
+    }
+    if (((StepsCount[0] >= StepsMAX) && (StepsCount[1] >= StepsMAX))) {
+        mean1 = round(np.array(Bends[0]).mean(), 1);
+        mean2 = round(np.array(Bends[1]).mean(), 1);
+        meanBoth = round(((mean1 + mean2) / 2), 1);
+        thisExp.addData("MeanSeq1", mean1);
+        thisExp.addData("MeanSeq2", mean2);
+        thisExp.addData("MeanBoth", meanBoth);
+        SecondStart = (TimeDurationExp - meanBoth);
+        Time1 = [(meanBoth + 0.8), (SecondStart - 0.8)];
+        Time2 = [(meanBoth - 0.8), (SecondStart + 0.8)];
+        thisExp.addData("NewTime1_start", Time1[0]);
+        thisExp.addData("NewTime1_end", Time2[0]);
+        thisExp.addData("NewTime2_start", Time1[1]);
+        thisExp.addData("NewTime2_end", Time2[1]);
+        if ((Experiment_Round <= 1)) {
+            Experiment_Round = 2;
+            StepsCount = [0, 0];
+            Bends = [[], []];
+            status = ["down", "up"];
+            time_durations.finished = true;
+        } else {
+            Experiment_Round = 3;
+            SecondPhase.finished = true;
+            time_durations.finished = true;
+        }
+    }
+    
     // the Routine "blackScreen3" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
