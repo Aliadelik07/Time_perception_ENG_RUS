@@ -1274,8 +1274,7 @@ function blackScreen3RoutineEachFrame(snapshot) {
 }
 
 
-var mean1;
-var mean2;
+
 var meanBoth;
 var SecondStart;
 function blackScreen3RoutineEnd(snapshot) {
@@ -1332,12 +1331,14 @@ function blackScreen3RoutineEnd(snapshot) {
             Time2[Seq] -= Steps[StepsCount[Seq]];
         }
     }
+    
+const average = list => list.reduce((prev, curr) => prev + curr) / list.length
+
+    
     if (((StepsCount[0] >= StepsMAX) && (StepsCount[1] >= StepsMAX))) {
-        mean1 = round(Bends[0].mean(), 1);
-        mean2 = round(Bends[1].mean(), 1);
-        meanBoth = round(((mean1 + mean2) / 2), 1);
-        psychoJS.experiment.addData("MeanSeq1", mean1);
-        psychoJS.experiment.addData("MeanSeq2", mean2);
+        meanBoth = (average(Bends[0]) + average(Bends[1])) / 2;
+        psychoJS.experiment.addData("MeanSeq1", average(Bends[0]));
+        psychoJS.experiment.addData("MeanSeq2", average(Bends[1]));
         psychoJS.experiment.addData("MeanBoth", meanBoth);
         SecondStart = (TimeDurationExp - meanBoth);
         Time1 = [(meanBoth + 0.8), (SecondStart - 0.8)];
