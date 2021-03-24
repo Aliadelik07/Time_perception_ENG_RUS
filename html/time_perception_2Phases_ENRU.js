@@ -1291,17 +1291,17 @@ function blackScreen3RoutineEnd(snapshot) {
         }
     
     responseRepeat.stop();
-    thisExp.addData("t1", Time1[Seq]);
-    thisExp.addData("t2", Time2[Seq]);
+    psychoJS.experiment.addData("t1", Time1[Seq]);
+    psychoJS.experiment.addData("t2", Time2[Seq]);
     if ((Seq === 0)) {
-        thisExp.addData("sequence", 56);
+        psychoJS.experiment.addData("sequence", 56);
     }
     if ((Seq === 1)) {
-        thisExp.addData("sequence", 40);
+        psychoJS.experiment.addData("sequence", 40);
     }
-    thisExp.addData("Status", status[Seq]);
-    thisExp.addData("Step56", StepsCount[0]);
-    thisExp.addData("Step40", StepsCount[1]);
+    psychoJS.experiment.addData("Status", status[Seq]);
+    psychoJS.experiment.addData("Step56", StepsCount[0]);
+    psychoJS.experiment.addData("Step40", StepsCount[1]);
     if (((choice.keys === "1") && (status[Seq] === "down"))) {
         Time1[Seq] -= Steps[StepsCount[Seq]];
         Time2[Seq] += Steps[StepsCount[Seq]];
@@ -1334,16 +1334,16 @@ function blackScreen3RoutineEnd(snapshot) {
         mean1 = round(np.array(Bends[0]).mean(), 1);
         mean2 = round(np.array(Bends[1]).mean(), 1);
         meanBoth = round(((mean1 + mean2) / 2), 1);
-        thisExp.addData("MeanSeq1", mean1);
-        thisExp.addData("MeanSeq2", mean2);
-        thisExp.addData("MeanBoth", meanBoth);
+        psychoJS.experiment.addData("MeanSeq1", mean1);
+        psychoJS.experiment.addData("MeanSeq2", mean2);
+        psychoJS.experiment.addData("MeanBoth", meanBoth);
         SecondStart = (TimeDurationExp - meanBoth);
         Time1 = [(meanBoth + 0.8), (SecondStart - 0.8)];
         Time2 = [(meanBoth - 0.8), (SecondStart + 0.8)];
-        thisExp.addData("NewTime1_start", Time1[0]);
-        thisExp.addData("NewTime1_end", Time2[0]);
-        thisExp.addData("NewTime2_start", Time1[1]);
-        thisExp.addData("NewTime2_end", Time2[1]);
+        psychoJS.experiment.addData("NewTime1_start", Time1[0]);
+        psychoJS.experiment.addData("NewTime1_end", Time2[0]);
+        psychoJS.experiment.addData("NewTime2_start", Time1[1]);
+        psychoJS.experiment.addData("NewTime2_end", Time2[1]);
         if ((Experiment_Round <= 1)) {
             Experiment_Round = 2;
             StepsCount = [0, 0];
