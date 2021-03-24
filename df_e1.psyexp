@@ -486,7 +486,7 @@
         <Param name="pos" updates="constant" val="(0, -0.8)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.1, 0.05)" valType="list"/>
+        <Param name="size" updates="constant" val="(0.2, 0.1)" valType="list"/>
         <Param name="startEstim" updates="None" val="" valType="num"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="num"/>

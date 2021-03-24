@@ -368,7 +368,7 @@ function experimentInit() {
   
   polygon = new visual.Rect ({
     win: psychoJS.window, name: 'polygon', 
-    width: [0.1, 0.05][0], height: [0.1, 0.05][1],
+    width: [0.2, 0.1][0], height: [0.2, 0.1][1],
     ori: 0.0, pos: [0, (- 0.8)],
     lineWidth: 1.0, lineColor: new util.Color('black'),
     fillColor: new util.Color('gray'),
