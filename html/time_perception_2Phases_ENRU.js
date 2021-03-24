@@ -630,7 +630,7 @@ function Random_SequenceRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    if ((random() <= 0.5)) {
+    if ((Math.random()<= 0.5)) {
         Seq = 0;
         if ((StepsCount[Seq] > 5)) {
             Seq = 1;
