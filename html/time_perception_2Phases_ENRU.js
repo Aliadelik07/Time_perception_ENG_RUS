@@ -1333,8 +1333,8 @@ function blackScreen3RoutineEnd(snapshot) {
         }
     }
     if (((StepsCount[0] >= StepsMAX) && (StepsCount[1] >= StepsMAX))) {
-        mean1 = round(np.array(Bends[0]).mean(), 1);
-        mean2 = round(np.array(Bends[1]).mean(), 1);
+        mean1 = round(Bends[0].mean(), 1);
+        mean2 = round(Bends[1].mean(), 1);
         meanBoth = round(((mean1 + mean2) / 2), 1);
         psychoJS.experiment.addData("MeanSeq1", mean1);
         psychoJS.experiment.addData("MeanSeq2", mean2);
