@@ -141,6 +141,7 @@ var key_resp;
 var ins;
 var con1;
 var grp;
+var all_rows;
 var shuffle;
 var b1_insClock;
 var text;
@@ -216,7 +217,7 @@ function experimentInit() {
       grp = "vv";
       psychoJS.experiment.addData("condition", grp);
   }
-  //all_rows = list(range(32));
+  all_rows = [...Array(32).keys()];
   shuffle = util.shuffle;
   shuffle(all_rows);
   
