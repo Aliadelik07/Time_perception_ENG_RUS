@@ -28,7 +28,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'time_perception_2Phases_ENRU';  // from the Builder filename that created this script
-let expInfo = {'participant': ''};
+let expInfo = {'Email': ''};
 
 // Start code blocks for 'Before Experiment'
 // schedule the experiment:
@@ -77,6 +77,7 @@ function updateInfo() {
   expInfo['psychopyVersion'] = '2020.2';
   expInfo['OS'] = window.navigator.platform;
 
+
   // store frame rate of monitor if we can measure it successfully
   expInfo['frameRate'] = psychoJS.window.getActualFrameRate();
   if (typeof expInfo['frameRate'] !== 'undefined')
@@ -94,6 +95,12 @@ function updateInfo() {
 var Choose_LanguageClock;
 var CH_Language;
 var Lang_Select;
+var WelcomeText;
+var RespImage;
+var PressSpace;
+var ThankYou;
+var WelcomeRUS;
+var WelcomeENG;
 var welcomeScreenClock;
 var welcomeText;
 var welcomeResp;
@@ -113,6 +120,7 @@ var blackScreen3Clock;
 var responseText;
 var responseRepeat;
 var SecondPhase_WelcomeClock;
+var TextSecond;
 var text;
 var key_resp;
 var endScreenClock;
@@ -134,6 +142,13 @@ function experimentInit() {
   });
   
   Lang_Select = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  WelcomeText = "";
+  RespImage = " ";
+  PressSpace = " ";
+  ThankYou = " ";
+  WelcomeRUS = "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435!\n\n\u0412\u0430\u0448\u0430 \u0437\u0430\u0434\u0430\u0447\u0430 \u0441\u0440\u0430\u0432\u043d\u0438\u0442\u044c \u0434\u043b\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u043f\u043e\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043f\u0440\u0435\u0434\u044a\u044f\u0432\u043b\u044f\u0435\u043c\u044b\u0445 \u0434\u0432\u0443\u0445 \u0437\u0432\u0435\u0437\u0434\u043e\u0447\u0435\u043a \u0438 \u0443\u043a\u0430\u0437\u0430\u0442\u044c \u043a\u0430\u043a\u0430\u044f \u0438\u0437 \u043d\u0438\u0445 \u0431\u044b\u043b\u0430 \u043d\u0430 \u044d\u043a\u0440\u0430\u043d\u0435 \u0431\u043e\u043b\u044c\u0448\u0435 \u0432\u0440\u0435\u043c\u0435\u043d\u0438:\n\n\u043f\u0435\u0440\u0432\u0430\u044f (\u043d\u0430\u0436\u0430\u0442\u044c \u043a\u043b\u0430\u0432\u0438\u0448\u0443 1) \u0438\u043b\u0438 \u0432\u0442\u043e\u0440\u0430\u044f (\u043d\u0430\u0436\u0430\u0442\u044c \u043a\u043b\u0430\u0432\u0438\u0448\u0443 2).\n\n\u0412\u043e \u0432\u0440\u0435\u043c\u044f \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f \u0437\u0430\u0434\u0430\u043d\u0438\u044f \u043c\u044b \u043f\u0440\u043e\u0441\u0438\u043c \u0412\u0430\u0441 \u043e\u0442\u043b\u043e\u0436\u0438\u0442\u044c \u0432\u0441\u0435 \u0434\u0440\u0443\u0433\u0438\u0435 \u0434\u0435\u043b\u0430 \u0438 \u043f\u043e\u043b\u0430\u0433\u0430\u0442\u044c\u0441\u044f \u043d\u0430 \u0412\u0430\u0448\u0435 \u0432\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0435\u0435 \u0447\u0443\u0432\u0441\u0442\u0432\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438, \u043d\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0447\u0430\u0441\u0430\u043c\u0438 \u0438 \u043d\u0435 \u0441\u0447\u0438\u0442\u0430\u0442\u044c \u043f\u0440\u043e \u0441\u0435\u0431\u044f.\n\n \u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043b\u0430\u0432\u0438\u0448\u0443 '\u041f\u0440\u043e\u0431\u0435\u043b' \u0434\u043b\u044f \u043d\u0430\u0447\u0430\u043b\u0430 \u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442\u0430.";
+  WelcomeENG = "Hello!\n\nYour task is to compare durations of two successively presented asterisks and indicate, which is longer in duration:\n\nthe first one (press button 1) or the second one (press button 2).\n\nPlease withdraw from any other activity during the task performance and rely on your inner sense of time. Try NOT to count or implement similar strategis (hand/foot tapping).\n\n\n Press 'Space' to start the experiment.";
   
   // Initialize components for Routine "welcomeScreen"
   welcomeScreenClock = new util.Clock();
@@ -226,6 +241,8 @@ function experimentInit() {
   
   // Initialize components for Routine "SecondPhase_Welcome"
   SecondPhase_WelcomeClock = new util.Clock();
+  TextSecond = "";
+  
   text = new visual.TextStim({
     win: psychoJS.window,
     name: 'text',
@@ -372,6 +389,20 @@ function Choose_LanguageRoutineEnd(snapshot) {
         }
     
     Lang_Select.stop();
+    if ((Lang_Select.keys === "1")) {
+        WelcomeText = WelcomeRUS;
+        RespImage = "img\"\\\"resp_longer_rus.png";
+        RespImage = RespImage.replace("\"", "");
+        PressSpace = "\u041d\u0430\u0436\u043c\u0438\u0442\u0435 '\u041f\u0440\u043e\u0431\u0435\u043b' \u0434\u043b\u044f \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0435\u043d\u0438\u044f.";
+        ThankYou = "\u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0431\u043e\u043b\u044c\u0448\u043e\u0435 \u0437\u0430 \u0443\u0447\u0430\u0441\u0442\u0438\u0435!";
+    } else {
+        WelcomeText = WelcomeENG;
+        RespImage = "img\"\\\"resp_longer.png";
+        RespImage = RespImage.replace("\"", "");
+        PressSpace = "Press SPACE to initiate a new trial";
+        ThankYou = "Thank you!";
+    }
+    
     // the Routine "Choose_Language" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -589,6 +620,7 @@ function SecondPhaseLoopEnd() {
 }
 
 
+var Seq;
 var Random_SequenceComponents;
 function Random_SequenceRoutineBegin(snapshot) {
   return function () {
@@ -598,6 +630,18 @@ function Random_SequenceRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
+    if ((random() <= 0.5)) {
+        Seq = 0;
+        if ((StepsCount[Seq] > 5)) {
+            Seq = 1;
+        }
+    } else {
+        Seq = 1;
+        if ((StepsCount[Seq] > 5)) {
+            Seq = 0;
+        }
+    }
+    
     // keep track of which components have finished
     Random_SequenceComponents = [];
     
@@ -1243,6 +1287,12 @@ function SecondPhase_WelcomeRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
+    if ((Experiment_Round <= 2)) {
+        TextSecond = "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u043b\u0430\u0441\u044c \u043f\u0435\u0440\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c \u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442\u0430.\n\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c \u043f\u0440\u043e\u0439\u0442\u0438 \u0432\u0442\u043e\u0440\u0443\u044e \u0447\u0430\u0441\u0442\u044c.\n\u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043b\u0430\u0432\u0438\u0448\u0443 '\u041f\u0440\u043e\u0431\u0435\u043b' \u0434\u043b\u044f \u043d\u0430\u0447\u0430\u043b\u0430.";
+    } else {
+        TextSecond = "\u0412\u0430\u0448 \u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d! \n\n\u041d\u0430\u0436\u043c\u0438\u0442\u0435, \u043f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043a\u043b\u0430\u0432\u0438\u0448\u0443 '\u041f\u0440\u043e\u0431\u0435\u043b'.";
+    }
+    
     text.setText(TextSecond);
     key_resp.keys = undefined;
     key_resp.rt = undefined;
