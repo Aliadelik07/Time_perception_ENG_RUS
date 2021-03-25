@@ -1,0 +1,18 @@
+Lang_Select.keys,Lang_Select.rt,welcomeResp.keys,welcomeResp.rt,choice.keys,choice.rt,responseRepeat.keys,responseRepeat.rt,t1,t2,sequence,Status,Step56,Step40,time_durations.thisRepN,time_durations.thisTrialN,time_durations.thisN,time_durations.thisIndex,time_durations.ran,Email,date,expName,psychopyVersion,OS,frameRate
+2,2.701,space,9.74,2,1.384,space,1.27,4,5.6,40,up,0,0,0,0,0,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,0.981,space,0.842,4.4,5.2,40,up,0,0,1,0,1,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,1.047,space,0.759,4.8,4.8,40,up,0,0,2,0,2,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,1,1.28,space,1.179,5.2,4.4,40,up,0,0,3,0,3,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,1.165,space,0.527,5.6,4,56,down,0,1,4,0,4,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,2.884,space,1.444,4.8,4.8,40,down,1,1,5,0,5,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,1,1.297,space,1.148,6,3.6,56,up,1,2,6,0,6,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,1,1.143,space,0.98,5.2,4.4,40,up,2,2,7,0,7,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,1.7,space,1.196,5.6,4,56,down,2,3,8,0,8,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,1,1.215,space,1.415,6,3.6,56,up,3,3,9,0,9,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,1,1.233,space,1.028,5.6,4,56,down,4,3,10,0,10,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,2.031,space,1.01,4.8,4.8,40,down,4,3,11,0,11,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,1,1.128,space,0.795,5.2,4.4,40,up,4,4,12,0,12,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,2.183,space,0.86,4.8,4.8,40,down,4,5,13,0,13,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,1,1.649,space,1.444,5.2,4.4,56,down,4,6,14,0,14,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,1.218,space,1.131,4.8,4.8,56,down,4,6,15,0,15,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
+,,,,2,46.309,space,0.796,5.2,4.4,56,up,5,6,16,0,16,0,1,,2021-03-24_21h36.32.286,time_perception_2Phases_ENRU,2021.2,Linux x86_64,60
